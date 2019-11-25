@@ -6,4 +6,4 @@ before_install:
    - docker build -f Dockerfile.dev . --tag portasanych/frontend_app_docker_udemy:latest
 
 script:
-   - docker run portasanych/frontend_app_docker_udemy CI=true npm run test -- --coverage
+   - docker run --env CI=true portasanych/frontend_app_docker_udemy npm run test -- --coverage
